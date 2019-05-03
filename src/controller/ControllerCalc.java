@@ -20,7 +20,10 @@ public class ControllerCalc implements Initializable{
 		
 	}
 	
-	int val1, val2, soma;
+	Integer val1 = null;
+	Integer val2 = null;
+	Integer soma = null;
+
 	
 	@FXML
 	private Button btnN1, btnN2, btnIgual, btnSoma;
@@ -35,23 +38,29 @@ public class ControllerCalc implements Initializable{
 		
 		if (event.getTarget() == btnN1) {
 			
-			txtResult.setText(btnN1.getText());
-			val1 = Integer.parseInt(txtResult.getText());
+			txtResult.setText(txtResult.getText() + btnN1.getText());
+			
 			
 			
 			
 		}else if (event.getTarget() == btnN2) {
 			
 
-			txtResult.setText(btnN2.getText());
+			txtResult.setText(txtResult.getText()+ btnN2.getText());
 			val2 = Integer.parseInt(txtResult.getText());
 			
 			
 		}else if (event.getTarget() == btnSoma) {
-            
-			soma += val1 + val2;
-			JOptionPane.showMessageDialog(null, "Soma = " + soma);
-			soma = 0;
+			if (val1 != null)  { 
+				val2 = Integer.parseInt(txtResult.getText());
+				soma = val1 + val2;
+				txtResult.setText("");
+				JOptionPane.showMessageDialog(null, "Soma = " + soma);
+				soma = 0;
+			} else { 
+				val1 = Integer.parseInt(txtResult.getText());
+				txtResult.setText("");
+			}
 		}
 		
 		
