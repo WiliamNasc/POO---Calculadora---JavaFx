@@ -6,11 +6,11 @@
 
 <AnchorPane prefHeight="218.0" prefWidth="224.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ControllerCalc">
    <children>
-      <Button fx:id="btnN1" layoutX="20.0" layoutY="55.0" mnemonicParsing="false" onAction="#acaoNum" text="1" />
-      <Button fx:id="btnN2" layoutX="59.0" layoutY="55.0" mnemonicParsing="false" onAction="#acaoNum" text="2" />
+      <Button fx:id="btnN1" layoutX="20.0" layoutY="55.0" mnemonicParsing="false" onAction="#acaoBotao" text="1" />
+      <Button fx:id="btnN2" layoutX="59.0" layoutY="55.0" mnemonicParsing="false" onAction="#acaoBotao" text="2" />
       <TextField fx:id="txtResult" layoutX="14.0" layoutY="14.0" />
       <Button fx:id="btnIgual" layoutX="19.0" layoutY="170.0" mnemonicParsing="false" text="=" />
-      <Button fx:id="btnSoma" layoutX="133.0" layoutY="55.0" mnemonicParsing="false" onAction="#acaoNum" text="+" />
+      <Button fx:id="btnSoma" layoutX="133.0" layoutY="55.0" mnemonicParsing="false" onAction="#acaoBotao" text="+" />
       <Button fx:id="btnN3" layoutX="95.0" layoutY="55.0" mnemonicParsing="false" text="3" />
       <Button fx:id="btnN4" layoutX="20.0" layoutY="95.0" mnemonicParsing="false" text="4" />
       <Button fx:id="btnN5" layoutX="59.0" layoutY="95.0" mnemonicParsing="false" text="5" />

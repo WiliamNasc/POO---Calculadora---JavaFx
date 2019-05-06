@@ -7,6 +7,7 @@ import javax.swing.JOptionPane;
 
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
+import javafx.event.EventTarget;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
@@ -26,17 +27,30 @@ public class ControllerCalc implements Initializable{
 
 	
 	@FXML
-	private Button btnN1, btnN2, btnIgual, btnSoma;
+	private Button btnN1, btnN2
+	, btnN3, btnSoma, btnIgual;
 	
 	@FXML
 	private TextField txtResult;
 	
 	
-	public void acaoNum(ActionEvent event) {
+	public void acaoBotao (ActionEvent event) {
 		
+		OperacoesBotoes op = new OperacoesBotoes();
+	    
+		if (event.getTarget() == btnN1){
+			txtResult.setText(txtResult.getText() + btnN1.getText());
+			op.captaText(txtResult);
+		}
+		if (event.getTarget() == btnN2){
+			txtResult.setText(txtResult.getText() + btnN2.getText());
+			op.captaText(txtResult);
+		}if (event.getTarget() == btnSoma){
+			op.captaText(txtResult);
+			op.soma(txtResult);
+		}
 		
-		
-		if (event.getTarget() == btnN1) {
+		/*if (event.getTarget() == btnN1) {
 			
 			txtResult.setText(txtResult.getText() + btnN1.getText());
 			
@@ -61,11 +75,11 @@ public class ControllerCalc implements Initializable{
 				val1 = Integer.parseInt(txtResult.getText());
 				txtResult.setText("");
 			}
-		}
+		}*/
 		
 		
-			
-		
+	/* fz um split no texto do textfield e pegar o que está antes		
+	   do "+" e depois do mais e somar. */
 		
 		
 	}
